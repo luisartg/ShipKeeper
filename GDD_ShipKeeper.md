@@ -29,7 +29,9 @@ You control a **ShipKeeper** in this **TOP DOWN** game where:
 | User Input | Makes the player |
 |------------|------------------|
 |[W,A,S,D]| walk in the direction of the pressed keys|
-|[MBL]| Execute action. Depends on the current held tool|
+|[MBL]| Axe Attack|
+|[MBR]| Shotgun Aim|
+|[MBR] + [MBL]| Shotgun Shot|
 
 ### 2. Basic Gameplay
 
@@ -103,8 +105,8 @@ At the start of the game, the title **[WORKING TITLE]** will appear and the game
 
 | Milestone | Due date | Description |
 |-----------|----------|-------------|
-| #1 | mm/dd | Player movement |
-| #2 | mm/dd | Player look |
+| #1 | mm/dd | Player movement - Done|
+| #2 | mm/dd | Player look - Done|
 | #3 | mm/dd | Player attack |
 | #4 | mm/dd | Basic Ship Map |
 | #5 | mm/dd | Blob function |
@@ -113,6 +115,17 @@ At the start of the game, the title **[WORKING TITLE]** will appear and the game
 | #8 | mm/dd | Dropables |
 | #9 | mm/dd | Inventory |
 | #10 | mm/dd | Eat System |
+
+## Future Ideas for monsters and encounters
+| Monster | Description |
+|-----------|----------|
+|Planted Head| A human head whose neck is rooted to the floor. Will sleep on candle light. Other lights wake them up and attack the player|
+|Crying Ghost| A passive ghost which keeps crying while staying in a specific place. It dissapears and appears in other random place if is seen by the player character directly for 2 seconds. Will only be released with a ritual. While they are in a room, the room will slowly get damaged.|
+|Fishrats| Common pest, easy too kill, but usually make nests which keeps producing the fishrats. They are an amalgam of fish head and rat body.|
+|Octocrab| An octorpus-like creature using a crab shell as defense.|
+|Watermites|Watermites rot the wood of the ship, they can nest anywhere and if released, they will slowly damage the room. If left alive, after a while they will infect other rooms.|
+|Meat lumps| Lumps of human flesh mashed together. Crawl slowly but somehow sturdy to kill. Chopping them is best way to kill them for good.|
+|Sea spider| Little white spider that creates resistant webs. They usually don't attack the player but their webs can cause trouble. If Watermites reach a room with Sea Spiders, the sea spiders will eat the watermites, but this will make them grow and will be able to attack the player in their new form|
 
 ### Backlog
 
