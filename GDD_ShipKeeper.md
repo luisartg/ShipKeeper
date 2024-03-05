@@ -134,7 +134,3 @@ At the start of the game, the title **[WORKING TITLE]** will appear and the game
 | Feature on backlog #1 - not a part of the minimum viable product | mm/dd |
 | Feature on backlog #2 - not a part of the minimum viable product | mm/dd |
 | Feature on backlog #3 - not a part of the minimum viable product | mm/dd |
-
-## Project Sketch
-
-![Project sketch](images/project-sketch.jpg)
