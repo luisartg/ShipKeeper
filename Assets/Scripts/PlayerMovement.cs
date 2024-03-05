@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 currentDirection = Vector2.zero;
     private Rigidbody2D playerRb;
 
+    private bool aimModeEnabled = false;
 
 
     // Start is called before the first frame update
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetAimType()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) || aimModeEnabled)
         {
             AimLookAt();
         }
@@ -73,5 +74,10 @@ public class PlayerMovement : MonoBehaviour
             zAngle -= 90; //Offset due to Z anlge at 0
             playerRb.rotation = zAngle;
         }
+    }
+
+    public void ForceAimMode(bool enabled)
+    {
+        aimModeEnabled = enabled;
     }
 }

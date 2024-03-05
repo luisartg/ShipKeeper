@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7688877931259523965}
   - component: {fileID: 2019126893590490339}
   - component: {fileID: 654733658957546767}
+  - component: {fileID: -4449611463005085443}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -148,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4449611463005085443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4961998464339935073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f38de55a1fbf544bad6682c6c698e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPoints: 1

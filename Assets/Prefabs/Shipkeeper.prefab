@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 2579775616760468804}
   - component: {fileID: 6453948407337814713}
   - component: {fileID: 50877180044224289}
+  - component: {fileID: 8909779640732698038}
   - component: {fileID: 2384251398096000153}
   - component: {fileID: 4921848665035895446}
   m_Layer: 0
@@ -252,6 +253,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 3
+--- !u!114 &8909779640732698038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4857862358658612492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94e49d5817cbff4d9a54e634f345b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axeCollider: {fileID: 8808148945917227649}
+  shotgunCollider: {fileID: 6234202287395551392}
 --- !u!114 &2384251398096000153
 MonoBehaviour:
   m_ObjectHideFlags: 0
