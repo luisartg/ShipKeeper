@@ -12,12 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRb;
 
     private bool aimModeEnabled = false;
-
+    private PlayerSFXManager playerSFXManager;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        playerSFXManager = GetComponent<PlayerSFXManager>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,15 @@ public class PlayerMovement : MonoBehaviour
             walkDir = walkDir.normalized;
         }
         playerRb.velocity = walkDir * walkSpeed;
+
+        if (currentDirection.magnitude > 0.6 )
+        {
+            playerSFXManager.TurnOnSteps();
+        }
+        else
+        {
+            playerSFXManager.TurnOffSteps();
+        }
     }
 
     private void SetAimType()

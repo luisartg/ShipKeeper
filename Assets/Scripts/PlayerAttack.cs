@@ -17,22 +17,24 @@ public class PlayerAttack : MonoBehaviour
     private float axeAttackTimeOut = 1;
     [SerializeField]
     private float axeColliderTime = 0.5f;
-    [SerializeField]
-    private float shotgunAttackTimeOut = 2;
-    [SerializeField]
-    private float shotgunColliderTime = 1;
+    //[SerializeField]
+    //private float shotgunAttackTimeOut = 2;
+    //[SerializeField]
+    //private float shotgunColliderTime = 1;
 
+    private PlayerSFXManager playerSFXManager;
     private PlayerMovement playerMovement;
     private Animator playerAnim;
     private bool _isAttacking =  false;
     private bool axeEnabled = true;
-    private bool shotgunEnabled = true;
+    //private bool shotgunEnabled = true;
 
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerAnim = GetComponent<Animator>();
+        playerSFXManager = GetComponent<PlayerSFXManager>();
 
         axeCollider.enabled = false;
         shotgunCollider.enabled = false;
@@ -61,6 +63,7 @@ public class PlayerAttack : MonoBehaviour
     private void DoAxeAttack()
     {
         playerAnim.SetTrigger("AxeAttack");
+        playerSFXManager.PlayAxeSwing();
         StartCoroutine(ColliderTime(axeColliderTime, axeCollider));
         StartCoroutine(ActivateAimMovementTemporarily(axeColliderTime));
         StartCoroutine(DisableAxeTemporarily());
