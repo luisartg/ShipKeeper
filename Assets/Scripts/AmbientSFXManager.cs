@@ -66,7 +66,6 @@ public class AmbientSFXManager : MonoBehaviour
 
     IEnumerator AudioTimeout(int seconds)
     {
-        Debug.Log($"Waiting {seconds} for ambience availability");
         yield return new WaitForSeconds(seconds);
         audioAvailable = true;
     }

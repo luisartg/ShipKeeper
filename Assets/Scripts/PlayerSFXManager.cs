@@ -9,7 +9,7 @@ public class PlayerSFXManager : MonoBehaviour
     public float fadeOutSpeed = 1f; // Volume level per second
 
     private bool stepsPlaying = false;
-    Coroutine stepsFadeOutCo;
+    private AudioFadeControl audioFadeSteps;
 
     [SerializeField]
     private AudioSource stepsAudio;
@@ -21,12 +21,8 @@ public class PlayerSFXManager : MonoBehaviour
     void Start()
     {
         stepsAudio = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        audioFadeSteps = gameObject.AddComponent<AudioFadeControl>();
+        audioFadeSteps.WorkWith(stepsAudio, fadeOutSpeed);
     }
 
     public void TurnOnSteps()
@@ -43,12 +39,8 @@ public class PlayerSFXManager : MonoBehaviour
 
     private void CheckForFadeOut()
     {
-        if (stepsFadeOutCo != null)
-        {
-            StopCoroutine(stepsFadeOutCo);
-            stepsFadeOutCo = null;
-            stepsAudio.Stop();
-        }
+        audioFadeSteps.StopFade();
+        stepsAudio.Stop();
     }
 
     public void TurnOffSteps()
@@ -56,28 +48,9 @@ public class PlayerSFXManager : MonoBehaviour
         if (stepsPlaying)
         {
             stepsPlaying = false;
-            stepsFadeOutCo = StartCoroutine(FadeOut());
+            audioFadeSteps.StartFadeOut();
         }
     }
-
-    IEnumerator FadeOut() 
-    {
-        float currentVolume;
-        Debug.Log("FadeOutStart");
-        while (stepsAudio.volume > 0)
-        {
-            currentVolume = stepsAudio.volume - (fadeOutSpeed * Time.deltaTime);
-            if (currentVolume <= 0)
-            {
-                currentVolume = 0;
-            }
-            stepsAudio.volume = currentVolume;
-            yield return null;
-        }
-        stepsAudio.Stop();
-        Debug.Log("FadeOutStopped by coroutine");
-    }
-
     public void PlayAxeSwing()
     {
         mainAudio.PlayOneShot(axeSwing, 1);
