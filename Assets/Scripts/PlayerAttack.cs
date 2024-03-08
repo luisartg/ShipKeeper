@@ -94,14 +94,13 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DamageableObject damage = collision.gameObject.GetComponent<DamageableObject>();
+        IDamageable damage = collision.gameObject.GetComponent<IDamageable>();
         if (damage != null)
         {
-            Debug.Log("Trigger was activated");
-        }
-        else
-        {
-            Debug.Log("That is no damagable");
+            if (!axeEnabled)
+            {
+                damage.DoDamage(1);
+            }
         }
     }
 }

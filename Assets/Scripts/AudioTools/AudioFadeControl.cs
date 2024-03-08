@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class AudioFadeControl: MonoBehaviour
 {
+    public float MaxVolume {
+        get { return _maxVolume; }
+        set {
+            _maxVolume = Mathf.Clamp01(value);
+        } 
+    }
+
+    private float _maxVolume = 1;
+
     private AudioSource audioS;
     private float fadeSpeed;
     private Coroutine fadeProcess;
@@ -34,12 +43,12 @@ public class AudioFadeControl: MonoBehaviour
     {
         float currentVolume;
         audioS.Play();
-        while (audioS.volume < 1)
+        while (audioS.volume < _maxVolume)
         {
             currentVolume = audioS.volume + (fadeSpeed * Time.deltaTime);
-            if (currentVolume >= 1)
+            if (currentVolume >= _maxVolume)
             {
-                currentVolume = 1;
+                currentVolume = _maxVolume;
             }
             audioS.volume = currentVolume;
             yield return null;
