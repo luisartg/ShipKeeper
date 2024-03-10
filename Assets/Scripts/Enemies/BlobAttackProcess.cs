@@ -19,7 +19,6 @@ public class BlobAttackProcess : MonoBehaviour
 
     private GameObject playerRef;
     private Vector2 targetPosition;
-    private bool attackActive = false;
 
     /* Flow:
      * 1- Wait for trigger to know the player is near
@@ -62,7 +61,6 @@ public class BlobAttackProcess : MonoBehaviour
 
     private void DoAttack()
     {
-        attackActive = true;
         StatesControl.ActivateState((int)States.Attack);
         sfxControl.PlaySound((int)Sounds.Attack);
         Vector2 direction = targetPosition - (Vector2)transform.position;
@@ -74,7 +72,6 @@ public class BlobAttackProcess : MonoBehaviour
     private IEnumerator WaitForAttackTime()
     {
         yield return new WaitForSeconds(AttackTime);
-        attackActive = false;
         StatesControl.ChangeTo((int)States.Base);
         StartCoroutine(WaitForRest());
     }
@@ -107,5 +104,11 @@ public class BlobAttackProcess : MonoBehaviour
     {
         PreAttack = 0,
         Attack = 1
+    }
+
+    public void StopAttacks()
+    {
+        StopAllCoroutines();
+        enabled = false;
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5868696870120457545}
   - component: {fileID: 5898669651647293068}
   - component: {fileID: 8199744180265071951}
+  - component: {fileID: 7449918660181395041}
   m_Layer: 0
   m_Name: BlobSpear
   m_TagString: Untagged
@@ -109,6 +110,7 @@ MonoBehaviour:
   - {fileID: 5438141872718454912}
   - {fileID: 3352104933178895694}
   - {fileID: 3566365424316950952}
+  - {fileID: 8451617976780179622}
 --- !u!114 &8199744180265071951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +126,24 @@ MonoBehaviour:
   SFXList:
   - {fileID: 8300000, guid: 3aa46543d47314f4e98184e3ff78f6dc, type: 3}
   - {fileID: 8300000, guid: b7a20cc29659d6a4fb57fa1ee55d3655, type: 3}
+  - {fileID: 8300000, guid: 41cadb3e9cb6b4246baf342e7fe5967d, type: 3}
   maxVolume: 0.5
+--- !u!114 &7449918660181395041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830235251238283186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5ffc5a6dcdbae488bb5d6d7115a7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sFXControl: {fileID: 8199744180265071951}
+  attackProcess: {fileID: 5868696870120457545}
+  stateControl: {fileID: 5898669651647293068}
+  TimeBeforeDestroy: 3
 --- !u!1 &3352104933178895694
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +383,8 @@ GameObject:
   - component: {fileID: 741693624394984450}
   - component: {fileID: 294851745821453247}
   - component: {fileID: 2636479793504174588}
-  - component: {fileID: 8489462329935816340}
+  - component: {fileID: 1724989428396299877}
+  - component: {fileID: 1454251460432927893}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -501,19 +521,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8489462329935816340
+--- !u!114 &1724989428396299877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5438141872718454912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47f38de55a1fbf544bad6682c6c698e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d6513956c9d3fb47ad342bbce5bda04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthPoints: 1
+  healthPoints: 3
+  sfxControl: {fileID: 1454251460432927893}
+  destroyContainer: {fileID: 1830235251238283186}
+--- !u!114 &1454251460432927893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438141872718454912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8803e229c673b8045bc57ce424708cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFXList:
+  - {fileID: 8300000, guid: e64a8e94c093b1e4d9b1a2ae57cb9d1a, type: 3}
+  maxVolume: 0.5
 --- !u!1 &8451617976780179622
 GameObject:
   m_ObjectHideFlags: 0

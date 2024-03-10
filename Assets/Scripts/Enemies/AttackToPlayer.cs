@@ -20,7 +20,7 @@ public class AttackToPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player was attacked");
+            collision.gameObject.GetComponent<PlayerLifeControl>().DoDamage(1);
         }
     }
 }

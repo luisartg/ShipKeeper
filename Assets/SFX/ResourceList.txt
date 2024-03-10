@@ -8,3 +8,6 @@ Author: rubberduck
 https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx
 https://opengameart.org/content/100-cc0-metal-and-wood-sfx
 https://opengameart.org/content/100-cc0-sfx
+
+Author: Badre-Eddine
+https://opengameart.org/content/hurt-death-sound-effect-for-character
