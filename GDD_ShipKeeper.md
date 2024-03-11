@@ -107,10 +107,10 @@ At the start of the game, the title **[WORKING TITLE]** will appear and the game
 |-----------|----------|-------------|
 | #1 | mm/dd | Player movement - Done|
 | #2 | mm/dd | Player look - Done|
-| #3 | mm/dd | Player attack |
-| #4 | mm/dd | Basic Ship Map |
-| #5 | mm/dd | Blob function |
-| #6 | mm/dd | Damage System |
+| #3 | mm/dd | Player attack - Done|
+| #4 | mm/dd | Basic Ship Map - Done|
+| #5 | mm/dd | Blob function - Done|
+| #6 | mm/dd | Damage System - Done|
 | #7 | mm/dd | Repair Ship System |
 | #8 | mm/dd | Dropables |
 | #9 | mm/dd | Inventory |
