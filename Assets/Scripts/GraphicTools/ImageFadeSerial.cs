@@ -14,7 +14,6 @@ public class ImageFadeSerial : MonoBehaviour
     {
         foreach (ImageFadeInfo info in ImageFadeInfoList)
         {
-            Debug.Log($"Sending fadeIn : {info.FadeIn}");
             StartCoroutine(StartFadeProcess(info));
         }
     }

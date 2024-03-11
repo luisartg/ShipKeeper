@@ -33,7 +33,6 @@ public class ImageFadeControl : MonoBehaviour
     {
         currentColorValue += ((float)fadeValue / 255) * Time.deltaTime;
         
-        Debug.Log($"Current Color Value: {currentColorValue} with {fadeValue} changeing {((float)fadeValue / 255) * Time.deltaTime} for current frame");
         if (currentColorValue <= 0)
         {
             currentColorValue = 0;

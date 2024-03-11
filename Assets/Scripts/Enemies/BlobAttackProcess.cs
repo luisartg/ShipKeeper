@@ -86,7 +86,6 @@ public class BlobAttackProcess : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player Detected");
             playerRef = collision.gameObject;
             proximityTrigger.enabled = false;
             StartAttack();
