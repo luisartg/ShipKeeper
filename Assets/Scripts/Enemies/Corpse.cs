@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using static UnityEditor.VersionControl.Asset;
 
 public class Corpse : MonoBehaviour, IDestroyable
@@ -92,6 +93,7 @@ public class Corpse : MonoBehaviour, IDestroyable
         gameObject.GetComponent<Collider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         DeadState.SetActive(true);
+        gameObject.GetComponent<ShadowCaster2D>().enabled = false;
         StartCoroutine(WaitBeforeFullDestroy());
     }
 

@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 5273066196815539819}
   - component: {fileID: 1601485011598332162}
   - component: {fileID: 3020053855037320602}
+  - component: {fileID: 2650673594977057634}
   m_Layer: 0
   m_Name: Corpse
   m_TagString: Untagged
@@ -321,6 +322,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &2650673594977057634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288267017503657901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000069a3a3e8c5925077cdfb96a8ebef5ff2af23814f
+  m_ShapePath:
+  - {x: -0.11302966, y: -0.31763467, z: 0}
+  - {x: -0.18192016, y: -0.07351558, z: 0}
+  - {x: -0.1308214, y: 0.15306115, z: 0}
+  - {x: 0.12192559, y: 0.1575091, z: 0}
+  - {x: 0.18725845, y: -0.07351558, z: 0}
+  - {x: 0.12637344, y: -0.3087388, z: 0}
+  m_ShapePathHash: 295197370
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 52528
+  m_LocalBounds:
+    m_Center: {x: 0.0026691407, y: -0.08006278, z: 0}
+    m_Extent: {x: 0.1845893, y: 0.2375719, z: 0}
 --- !u!1 &9200718698316554692
 GameObject:
   m_ObjectHideFlags: 0

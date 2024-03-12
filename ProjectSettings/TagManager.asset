@@ -53,3 +53,6 @@ TagManager:
   - name: Ceiling
     uniqueID: 4066373611
     locked: 0
+  - name: TextOverlay
+    uniqueID: 1333863343
+    locked: 0
