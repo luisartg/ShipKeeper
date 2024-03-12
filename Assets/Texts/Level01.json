@@ -1,0 +1,31 @@
+{ 
+    "GameTexts":
+    [
+        {
+            "ID":"Begining01",
+            "TextLines" : [
+                "Hey kid, do you receive me? ....",
+                "All right.",
+                "Welcome to your first ship kid, or should I properly say: 'Ghost ship'.",
+                "I know you all newbies have been hearing crazy stories about this job.",
+                "The good news is that not all of them are true... I hope.",
+                "Even with all my years in this job, once in a while I get to see some weird stuff.",
+                "But enough of that. As I was saying...",
+                "You are a now a Shipkeeper. Our job is to clean and repair these damn ghost ships.",
+                "As you surely read in your welcome manual, a ghost ship is any kind of vessel that has been abandoned and drifting at deep sea.",
+                "Maybe for too long... And as a result, something out there, took that vessel as their home.",
+                "We don't know what causes it, but when those ships are found, they bring them all here: to Wichdum Island.",
+                "Things have gotten ugly in the past... So that's why we are the first line of defense for these things.",
+                "Thus, by cleaning, we mean 'eradicate' whatever unholy being is living in there.",
+                "Also, since this job does not actually pay that well, you might as well repair the ship.",
+                "You are allowed to sell it when repaired. Win-win isn't it?",
+                "All right, so remember. Clean and Repair, that's how we Shipkeepers do.",
+                "So, first things first. I actually worked already in this ship. I'm pretty sure is already clean, but still needs repairment.",
+                "Since you are new, I'm gonna let you do this task. You can thank me later, kid.",
+                "For some reason you don't need to understand for now, all you need to do is to get close to any broken stuff, and press [E] to start repairing it.",
+                "Don't worry about resources, you won't need them for now.",
+                "Good luck out there kid. I'll keep an eye on you if needed."
+            ]
+        }
+    ]
+}

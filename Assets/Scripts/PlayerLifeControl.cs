@@ -16,13 +16,14 @@ public class PlayerLifeControl : MonoBehaviour
     public AudioSource audioTurnOff;
 
     private bool damageTimeOut = false;
+    private LifeDisplay lifeDisplay = null;
 
     [SerializeField]
     private int lifePoints = 3;
     // Start is called before the first frame update
     void Start()
     {
-        
+        lifeDisplay = FindObjectOfType<LifeDisplay>();
     }
 
     // Update is called once per frame
@@ -45,6 +46,7 @@ public class PlayerLifeControl : MonoBehaviour
             bloodPS.Play();
             audioSource.PlayOneShot(damageSound);
             lifePoints -= damagePoints;
+            lifeDisplay.ReportLife(lifePoints);
         }
 
         if (lifePoints <= 0)

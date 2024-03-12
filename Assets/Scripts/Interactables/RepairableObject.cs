@@ -11,6 +11,8 @@ public class RepairableObject : MonoBehaviour
     private States currentState = States.Broken;
     private AudioFadeControl fadeControl;
 
+    private GameplayControl gameplayControl;
+
     private bool playerInRange = false;
     private float currentRepair = 0;
 
@@ -19,6 +21,8 @@ public class RepairableObject : MonoBehaviour
     {
         fadeControl = gameObject.AddComponent<AudioFadeControl>();
         fadeControl.WorkWith(repairSound, 1.5f);
+        gameplayControl = FindObjectOfType<GameplayControl>();
+        gameplayControl.BrokenStuffReport();
     }
 
     // Update is called once per frame
@@ -38,6 +42,7 @@ public class RepairableObject : MonoBehaviour
                     currentState = States.Repaired;
                     stateControl.ChangeTo((int)currentState);
                     repairSound.Stop();
+                    gameplayControl.FixedStuffReport();
                 }
             }
             else
