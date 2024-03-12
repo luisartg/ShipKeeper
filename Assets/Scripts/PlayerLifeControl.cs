@@ -6,6 +6,7 @@ using UnityEngine.U2D;
 
 public class PlayerLifeControl : MonoBehaviour
 {
+    public float InvencivilityTime = 2f;
     public List<MonoBehaviour> ScriptsToTurnOffWhenDead = new();
     public SpriteRenderer visual;
     public ParticleSystem bloodPS;
@@ -13,6 +14,8 @@ public class PlayerLifeControl : MonoBehaviour
     public AudioClip damageSound;
     public AudioSource audioSource;
     public AudioSource audioTurnOff;
+
+    private bool damageTimeOut = false;
 
     [SerializeField]
     private int lifePoints = 3;
@@ -30,6 +33,13 @@ public class PlayerLifeControl : MonoBehaviour
 
     public void DoDamage(int damagePoints)
     {
+        if (damageTimeOut || lifePoints <= 0)
+        {
+            return;
+        }
+
+        StartCoroutine(DoDamageTimeOut());
+
         if (lifePoints > 0)
         {
             bloodPS.Play();
@@ -41,6 +51,13 @@ public class PlayerLifeControl : MonoBehaviour
         {
             Dead();
         }
+    }
+
+    private IEnumerator DoDamageTimeOut()
+    {
+        damageTimeOut = true;
+        yield return new WaitForSeconds(InvencivilityTime);
+        damageTimeOut = false;
     }
 
     private void Dead()

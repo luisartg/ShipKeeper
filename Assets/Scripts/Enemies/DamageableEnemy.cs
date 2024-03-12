@@ -34,7 +34,7 @@ public class DamageableEnemy : MonoBehaviour, IDamageable
             }
             else
             {
-                sfxControl.PlaySound((int)Sounds.getHit);
+                sfxControl.PlaySound((int)Sounds.getHit); // TODO: Fix this flow, so it can play when 0
             }
         }
     }
