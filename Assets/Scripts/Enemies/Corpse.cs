@@ -2,7 +2,9 @@ using Assets.Scripts.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using static UnityEditor.VersionControl.Asset;
 
 public class Corpse : MonoBehaviour, IDestroyable
 {
@@ -54,6 +56,9 @@ public class Corpse : MonoBehaviour, IDestroyable
     {
         enemyRb.velocity = (playerLifeControl.gameObject.transform.position - transform.position)
             .normalized * CrawlSpeed;
+        Vector2 direction = (Vector2)playerLifeControl.gameObject.transform.position - (Vector2)transform.position;
+        gameObject.transform.rotation
+            = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90);
     }
 
     public void FollowPlayerStart(PlayerLifeControl playerRef)
