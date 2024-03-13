@@ -829,6 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8020354a9458474aaba935b2295dd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NextSceneName: Level01
   LogoMusicPlayer: {fileID: 1862860254}
   fadeoutProcess: {fileID: 2007193559}
   StartEffectAudio: {fileID: 2007193563}

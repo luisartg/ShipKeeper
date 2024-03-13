@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.U2D;
 
 public class PlayerLifeControl : MonoBehaviour
@@ -74,5 +75,13 @@ public class PlayerLifeControl : MonoBehaviour
         audioTurnOff.Stop();
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Collider2D>().enabled = false;
+
+        StartCoroutine(ReloadAfterTime());
+    }
+
+    private IEnumerator ReloadAfterTime()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

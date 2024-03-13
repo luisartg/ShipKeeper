@@ -54,10 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8003878805605181645, guid: 65c33dbada1875a4fa45a2cc4ea1db4c, type: 3}
       propertyPath: m_Name
-      value: RepairableObject Variant
+      value: Water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 762992784828136865, guid: 65c33dbada1875a4fa45a2cc4ea1db4c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65c33dbada1875a4fa45a2cc4ea1db4c, type: 3}

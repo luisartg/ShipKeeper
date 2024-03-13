@@ -35,11 +35,21 @@
             ]
         },
         {
+            "ID":"GoldenRule01",
+            "TextLines" :[
+                "You know, we Shipkeepers go by a simple golden rule.",
+                "  - If there is something in the floor that does not look like the floor, we clean it or repair it - ",
+                "But really, if you get close to something, and can you can repair it or clean it with [E], you must do it."
+            ]
+        },
+        {
             "ID":"BrokeLight01",
             "TextLines" :[
                 "Damn lights! I hate those electric fancy good for nothin' lights.",
-                "You know the drill kid, just go near to it and start repairing it by keeping [E] pressed.",
-                "Mind you eyes, he he he..."
+                "But don't worry kid. Just enjoy the darkness... Aaaah! Just kidding! Press [F] to pay respects... I  mean, to turn on your lantern.",
+                "As for the light, you know the drill kid, just go near to it and start repairing it by keeping [E] pressed.",
+                "You may see where the broken light is by finding the little sparks going out of it. Easy as pie, right?",
+                "Oh, and once is fixed, mind you eyes, he he he..."
             ]
         }
     ]

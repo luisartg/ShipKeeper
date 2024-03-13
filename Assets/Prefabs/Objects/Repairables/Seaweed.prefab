@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 1517294190, guid: bbadb7b54bd38e54db405d97fb17301b, type: 3}
     - target: {fileID: 5599178271973934671, guid: 483593998b33897428aef52fdc94ffcd, type: 3}
       propertyPath: m_Name
-      value: RepairableObject Variant
+      value: Seaweed
       objectReference: {fileID: 0}
     - target: {fileID: 7162503001710137426, guid: 483593998b33897428aef52fdc94ffcd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,7 +61,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5ac13424cab805a479eab48de08e58ec, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2896248059091850019, guid: 483593998b33897428aef52fdc94ffcd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 483593998b33897428aef52fdc94ffcd, type: 3}

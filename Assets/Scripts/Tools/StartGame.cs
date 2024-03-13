@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
+    public string NextSceneName;
     public LogoMusic LogoMusicPlayer;
     public ImageFadeSerial fadeoutProcess;
     public AudioSource StartEffectAudio;
@@ -47,6 +49,6 @@ public class StartGame : MonoBehaviour
     private IEnumerator WaitFade()
     {
         yield return new WaitForSeconds(WaitTimeForLoad);
-        Debug.Log("Load STARTS!");
+        SceneManager.LoadScene(NextSceneName);
     }
 }
