@@ -9,8 +9,15 @@
                 "We got this new ship but... I don't know... Nah! You'll be just fine.",
                 "You showed those blobs who was in charge.",
                 "However, we got 'corpses' this time. They are fairly easy to kill, it is almost like they are there and not quiet.",
-                "The dab thing about them, is that when you find one, there's surely more.",
+                "The bad thing about them, is that when you find one, there's surely more... a lot more.",
                 "Keep your eyes open, all right?"
+            ]
+        },
+        {
+            "ID":"Doors01",
+            "TextLines" : [
+                "Wow! Did you see that?! That's why I hate those electronics I tell you!!",
+                "See if you can find the switch to open the door, should be around. Just press it with [E] and you should be good to go!"
             ]
         }
     ]
