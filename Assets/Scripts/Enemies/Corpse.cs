@@ -19,9 +19,14 @@ public class Corpse : MonoBehaviour, IDestroyable
     private PlayerLifeControl playerLifeControl;
     private Rigidbody2D enemyRb;
 
+    private GameplayControl gameplayControl;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameplayControl = FindObjectOfType<GameplayControl>();
+        gameplayControl.MonsterReport();
+
         enemyRb = GetComponent<Rigidbody2D>();
     }
 
@@ -88,6 +93,7 @@ public class Corpse : MonoBehaviour, IDestroyable
     {
         // What happens when this dies
         dead = true;
+        gameplayControl.MonsterKillReport();
         enemyRb.velocity = Vector2.zero;
         enemyRb.isKinematic = true;
         gameObject.GetComponent<Collider2D>().enabled = false;

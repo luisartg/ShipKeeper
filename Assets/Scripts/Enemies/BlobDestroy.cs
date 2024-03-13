@@ -13,8 +13,17 @@ public class BlobDestroy : MonoBehaviour, IDestroyable
     public StateControl stateControl;
     public float TimeBeforeDestroy = 10f;
 
+    private GameplayControl gameplayControl;
+
+    private void Start()
+    {
+        gameplayControl = FindObjectOfType<GameplayControl>();
+        gameplayControl.MonsterReport();
+    }
+
     public void StartDestroy()
     {
+        gameplayControl.MonsterKillReport();
         sFXControl.PlaySound((int) Sounds.Dead);
         attackProcess.StopAttacks();
         stateControl.ChangeTo((int) States.Dead);

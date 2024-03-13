@@ -28,6 +28,7 @@ public class GameplayControl : MonoBehaviour
         if (fixedStuff >= reportedBrokenStuff && monstersKilled >= reportedMonsters)
         {
             FindObjectOfType<ExitControl>().ActivateExit();
+            FindObjectOfType<ExitMessage>().WriteExit();
         }
     }
 

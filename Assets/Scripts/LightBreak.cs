@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -7,7 +8,9 @@ public class LightBreak : MonoBehaviour
 {
     public float BreakProbability = 1;
     public AudioClip BreakSound;
-    public Light2D lightSource;
+    public GameObject lightSource;
+    public StateControl stateControl;
+    public GameObject Broke;
 
     private AudioSource audioSource;
     BoxCollider2D lightCollider;
@@ -34,8 +37,10 @@ public class LightBreak : MonoBehaviour
             lightCollider.enabled = false;
             if (BreakProbability >= Random.Range(0.1f, 1f))
             {
+                Broke.SetActive(true);
                 audioSource.PlayOneShot(BreakSound);
-                lightSource.intensity = 0;
+                //lightSource.SetActive(false);
+                stateControl.ChangeTo(0);
             }
         }
     }
