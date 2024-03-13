@@ -7,7 +7,7 @@ public class PlayerLightControl : MonoBehaviour
 {
     public AudioClip actionSound;
     [SerializeField]
-    private bool lightEnabled = true;
+    private bool lightEnabled = false;
 
     private Light2D lightSource;
     private AudioSource audioSource;

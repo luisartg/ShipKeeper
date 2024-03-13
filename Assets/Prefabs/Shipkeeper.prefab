@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionSound: {fileID: 8300000, guid: 0d02972a7fd468c40a4229430786620b, type: 3}
-  lightEnabled: 1
+  lightEnabled: 0
 --- !u!1 &3709903445507153391
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c702aa1f78ebbd0488f4793ccbfbaff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InvencivilityTime: 2
   ScriptsToTurnOffWhenDead:
   - {fileID: 50877180044224289}
   - {fileID: 8909779640732698038}

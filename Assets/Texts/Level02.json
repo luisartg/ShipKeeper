@@ -1,0 +1,29 @@
+{ 
+    "GameTexts":
+    [
+        {
+            "ID":"Begining01",
+            "TextLines" : [
+                "ALL right, kid. Fine job in the last ship. That one is going to sell nicely... well, as much as a known ghost ship can be sold.",
+                "Now, I got something special for you. We got another ship, and initial reports say that this one is parasited by 'blobs'...",
+                "No numbers, no locations. Well, so much for a report, right? What a waste of paper I tell ya!",
+                "But don't worry. A Shipkeeper never works without their trusty axe. We also had a shotgun, but that thing broke a few days ago.",
+                "It's gonna take a while to repair. So don't ask for it for the time being.",
+                "On the good news, this pest that we call 'blob' never moves. That, however, does not make it less dangerous.",
+                "Nasty pests I tell you! They all have these nasty spear-like tentacles. Careful with those things, -three hits- of that and you will be done.",
+                "To kill blobs just hit them with you axe by pressing [LMB].",
+                "Oh! And if you want to take aim while moving, just keep [RMB] pressed.",
+                "All right kid... Good luck in there."
+            ]
+        },
+        {
+            "ID":"Barricade01",
+            "TextLines" : [
+                "Would you look at that! It seems the sailors made a barricade with all they could before their last days on the ship.",
+                "You may want to find another way. But is probable there is barricades on other places.",
+                "Well, that's one thing I love of this job. Nothin' like a good ol' wood smashing, am I right?",
+                "Time to practice that axe swing kid, go nuts!"
+            ]
+        }
+    ]
+}
