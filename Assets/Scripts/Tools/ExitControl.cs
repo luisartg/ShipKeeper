@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitControl : MonoBehaviour
 {
-    public string NextScene = "";
+    public string NextScene;
     public GameObject Visual;
     public Collider2D Collider;
 
@@ -19,7 +19,12 @@ public class ExitControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //TEST
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    Debug.Log($"Loading scene of name[{NextScene}]");
+        //    SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
+        //}
     }
 
     public void ActivateExit()
@@ -32,7 +37,7 @@ public class ExitControl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(NextScene);
+            SceneManager.LoadScene(NextScene, LoadSceneMode.Single);
         }
     }
 }
