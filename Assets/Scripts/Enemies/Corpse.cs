@@ -1,11 +1,7 @@
 using Assets.Scripts.Interfaces;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
-using static UnityEditor.VersionControl.Asset;
 
 public class Corpse : MonoBehaviour, IDestroyable
 {
